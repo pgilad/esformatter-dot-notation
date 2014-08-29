@@ -1,0 +1,48 @@
+{
+    "name": "esformatter-dot-notation",
+    "version": "0.1.0",
+    "description": "esformatter plugin for transforming object bracket usage to dot notation",
+    "engines": {
+        "node": ">=0.10.0"
+    },
+    "main": "index.js",
+    "files": [
+        "index.js",
+        "license.md"
+    ],
+    "scripts": {
+        "test": "mocha -R spec tests",
+        "watch": "mocha -R spec --watch tests"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pgilad/esformatter-dot-notation.git"
+    },
+    "keywords": [
+        "esformatter",
+        "string",
+        "dot-notation",
+        "literal",
+        "AST",
+        "rocambole",
+        "esprima",
+        "codestyle"
+    ],
+    "author": {
+        "name": "Gilad Peleg",
+        "email": "giladp007@gmail.com"
+    },
+    "license": "MIT",
+    "bugs": "https://github.com/pgilad/esformatter-dot-notation/issues",
+    "homepage": "https://github.com/pgilad/esformatter-dot-notation",
+    "devDependencies": {
+        "chai": "^1.9.1",
+        "mocha": "^1.21.0",
+        "esformatter": "^0.4.1"
+    },
+    "dependencies": {
+        "rocambole": "^0.3.6",
+        "rocambole-token": "^1.2.1",
+        "valid-literal": "^0.1.1"
+    }
+}
