@@ -1,6 +1,6 @@
 {
   "name": "esformatter-dot-notation",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "esformatter plugin for transforming object bracket usage to dot notation",
   "engines": {
     "node": ">=0.10.0"
