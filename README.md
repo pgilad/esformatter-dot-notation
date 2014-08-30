@@ -9,11 +9,11 @@
 **esformatter-dot-notation** is a plugin for [esformatter](https://github.com/millermedeiros/esformatter)
 meant to convert accessing object properties with brackets into dot notation where valid.
 
-This module uses [valid-literal](https://github.com/pgilad/valid-literal) which uses Mathias Bynens
+This module uses [unquoted-property-validator](https://github.com/pgilad/unquoted-property-validator) which uses Mathias Bynens
 [implementation](https://github.com/mathiasbynens/mothereff.in/tree/master/js-properties)
-in order to validate if a literal inside the brackets is valid for dot notation usage.
+in order to validate if a property name is a valid identifier name and can be used with dot notation.
 
-That means invalid literals will not be converted and your code is safe for transformations (see [tests](tests/compare.spec.js)).
+That means invalid identifiers will not be converted and your code is safe for transformations (see [tests](tests/compare.spec.js)).
 
 Turn this:
 ```js

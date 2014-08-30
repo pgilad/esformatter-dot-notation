@@ -2,9 +2,9 @@
 
 var tk = require('rocambole-token');
 var rocambole = require('rocambole');
-var validLiteral = require('valid-literal');
+var unquotedValidator = require('unquoted-property-validator');
 
-var transormToDotNotation = function (node) {
+var transormToDotNotation = function(node) {
     var old = node;
     //reassign correct value
     old.startToken.value = old.endToken.value = node.value;
@@ -26,18 +26,18 @@ var transormToDotNotation = function (node) {
     node = block;
 };
 
-var isLiteralComputedExpression = function (node) {
+var isLiteralComputedExpression = function(node) {
     return node.type === 'MemberExpression' &&
         node.computed &&
         node.property.type === 'Literal';
 };
 
-var needsBrackets = function (value) {
-    return validLiteral(value).needsBrackets;
+var needsBrackets = function(value) {
+    return unquotedValidator(value).needsBrackets;
 };
 
-exports.transformBefore = function (ast) {
-    rocambole.moonwalk(ast, function (node) {
+exports.transformBefore = function(ast) {
+    rocambole.moonwalk(ast, function(node) {
         if (isLiteralComputedExpression(node) && !needsBrackets(node.property.value)) {
             transormToDotNotation(node.property);
         }

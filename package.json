@@ -43,6 +43,6 @@
   "dependencies": {
     "rocambole": "^0.3.6",
     "rocambole-token": "^1.2.1",
-    "valid-literal": "^0.1.1"
+    "unquoted-property-validator": "^0.1.2"
   }
 }
