@@ -37,8 +37,8 @@
   "homepage": "https://github.com/pgilad/esformatter-dot-notation",
   "devDependencies": {
     "chai": "^1.9.1",
-    "mocha": "^1.21.0",
-    "esformatter": "^0.4.1"
+    "esformatter": "^0.4.2",
+    "mocha": "^1.21.0"
   },
   "dependencies": {
     "rocambole": "^0.3.6",
