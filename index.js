@@ -29,7 +29,8 @@ var transormToDotNotation = function(node) {
 var isLiteralComputedExpression = function(node) {
     return node.type === 'MemberExpression' &&
         node.computed &&
-        node.property.type === 'Literal';
+        node.property.type === 'Literal' &&
+        isNaN(node.property.value);
 };
 
 var needsBrackets = function(value) {

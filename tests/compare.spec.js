@@ -52,5 +52,9 @@ describe('esformatter-dot-notation', function () {
         it('should correctly handle a property of empty string', function () {
             compare('empty.js');
         });
+
+        it('should correctly handle property name using integer', function () {
+            compare('integer.js');
+        });
     });
 });
