@@ -36,9 +36,10 @@
   "bugs": "https://github.com/pgilad/esformatter-dot-notation/issues",
   "homepage": "https://github.com/pgilad/esformatter-dot-notation",
   "devDependencies": {
-    "chai": "^1.9.1",
+    "chai": "*",
     "esformatter": "^0.4.2",
-    "mocha": "^1.21.0"
+    "esformatter-quotes": "^1.0.0",
+    "mocha": "*"
   },
   "dependencies": {
     "rocambole": "^0.3.6",

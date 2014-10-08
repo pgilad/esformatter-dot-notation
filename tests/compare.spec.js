@@ -53,4 +53,22 @@ describe('esformatter-dot-notation', function () {
             compare('empty.js');
         });
     });
+
+    describe('integration with esformatter-quotes', function () {
+        it('should correctly transform', function () {
+            esformatter.unregister(dotNotation);
+            // register plugin
+            esformatter.register(require('esformatter-quotes'));
+            //jshint quotmark:false
+            var str = "someObject['property'] = true;";
+            // pass options as second argument
+            var output = esformatter.format(str, {
+                'quotes': {
+                    'type': 'single',
+                    'avoidEscape': true
+                }
+            });
+            expect(output).to.eql('someObject.property = true;');
+        });
+    });
 });
