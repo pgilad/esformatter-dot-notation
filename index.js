@@ -22,6 +22,8 @@ var transormToDotNotation = function (node) {
         }),
         endToken: old.endToken
     };
+    block.endToken.type = 'Identifier';
+    block.startToken.next.type = 'Identifier';
     old.parent = block;
     node = block;
 };
