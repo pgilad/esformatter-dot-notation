@@ -56,6 +56,13 @@ describe('esformatter-dot-notation', function () {
         it('should correctly handle property name using integer', function () {
             compare('integer.js');
         });
+
+        it('should correctly handle number index', function () {
+            //jshint quotmark:false
+            var str = 'if(test[0] == "Hello"){}';
+            var output = esformatter.format(str);
+            expect(output.trim()).to.eql('if (test[0] == "Hello") {\n}');
+        });
     });
 
     describe('integration with esformatter-quotes', function () {
