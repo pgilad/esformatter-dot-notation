@@ -1,6 +1,6 @@
 {
   "name": "esformatter-dot-notation",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "esformatter plugin for transforming object bracket usage to dot notation",
   "repository": "pgilad/esformatter-dot-notation",
   "license": "MIT",
