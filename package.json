@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "chai": "^2.3.0",
-    "esformatter": "^0.6.1",
+    "esformatter": "^0.7.0",
     "esformatter-quotes": "^1.0.1",
     "mocha": "^2.2.4"
   }
